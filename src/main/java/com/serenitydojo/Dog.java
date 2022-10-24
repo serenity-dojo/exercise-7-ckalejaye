@@ -1,7 +1,9 @@
 package com.serenitydojo;
 
 public class Dog extends Pet {
+
     private String favoriteToy;
+
     private boolean isFed = false;
 
     public static final String DOG_NOISE = "Woof";
@@ -9,15 +11,14 @@ public class Dog extends Pet {
     public Dog(String name, String favoriteToy, int age) {
         super(name, age);
         this.favoriteToy = favoriteToy;
+
     }
 
+    @Override
     public String getFavoriteToy() {
         return favoriteToy;
     }
 
-    public void setFavoriteToy(String favoriteToy) {
-        this.favoriteToy = favoriteToy;
-    }
 
     public boolean isFed() {
         return isFed;
@@ -31,7 +32,7 @@ public class Dog extends Pet {
     }
 
     @Override
-    public String play() {
+        public String play() {
         return "plays with bone";
     }
 }
